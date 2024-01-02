@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: evm-abis-api
+    region: frankfurt
+    plan: starter
+    env: docker
+    rootDir: ./packages/api
+    envVars:
+      - key: MEM_LIMIT
+        value: 512
+      - key: TMP_PATH
+        value: /tmp
+      - key: ETHERSCAN_API_KEY
+        sync: false
+      - key: BASESCAN_API_KEY
+        sync: false
+      - key: POLYGONSCAN_API_KEY
+        sync: false
+      - key: NPM_TOKEN
+        sync: false
+    healthCheckPath: /monitoring/heartbeat
+    autoDeploy: true
+    domains:
+      - evm-abis.xyz
+    scaling:
+      minInstances: 2
+      maxInstances: 10
+      targetMemoryPercent: 70
+      targetCPUPercent: 70

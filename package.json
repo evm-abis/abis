@@ -1,0 +1,29 @@
+{
+  "name": "@evm-abis/abis",
+  "version": "0.0.3",
+  "access": "public",
+  "description": "ABIs for ERCs",
+  "homepage": "https://eips.ethereum.org/erc",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evm-abis/abis.git"
+  },
+  "keywords": ["abi", "eth", "ethereum", "typescript", "web3"],
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "publish": "npm publish --access public",
+    "lint": "biome check .",
+    "lint:fix": "npm lint --apply"
+  },
+  "dependencies": {
+    "abitype": "^0.10.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.1",
+    "typescript": "^5.3.3"
+  }
+}
