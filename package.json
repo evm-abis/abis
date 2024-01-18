@@ -1,6 +1,6 @@
 {
   "name": "@evm-abis/abis",
-  "version": "0.0.3",
+  "version": "1.0.1",
   "access": "public",
   "description": "ABIs for ERCs",
   "homepage": "https://eips.ethereum.org/erc",
